@@ -24,6 +24,7 @@ public class SegTools {
 		SegOption option = new SegOption();
 		option.doPosTagging = true;  //做词性标注
 		option.grainSize = mode;
+		option.outputDelimiter = false;//不输出标点符号
 		
 		if(settings != null){
 			option.mergeChineseName = settings.getAsBoolean("mergeChineseName", true);
