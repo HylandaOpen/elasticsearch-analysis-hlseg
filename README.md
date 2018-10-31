@@ -8,9 +8,9 @@ Analyzer: `hlseg_search` , `hlseg_large` , `hlseg_normal`, Tokenizer: `hlseg_sea
 Versions
 --------
 
-hlseg version | ES version
------------|-----------
-5.6.9| 5.6.9
+hlseg version | ES version | Release Link |
+-----------|-----------|-----------
+5.6.9| 5.6.9| Download: [v5.6.9](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases) |
 5.5.1| 5.5.1
 
 Install
