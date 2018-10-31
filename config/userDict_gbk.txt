@@ -1,0 +1,7 @@
+投资部长
+合不拢嘴	l,d
+#卧虎藏龙	n,movie
+苹果	n,nt,fruit,corp
+的	stopword
+海量中文分词系统	nz	idf-lv5
+拼多多	nz	idf-lv4
