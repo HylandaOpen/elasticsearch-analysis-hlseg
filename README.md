@@ -10,7 +10,7 @@ Versions
 
 hlseg version | ES version | Release Link |
 -----------|-----------|-----------
-5.6.9| 5.6.9| Download: [v5.6.9](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases) |
+5.6.9| 5.6.9| Download: [v5.6.9](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v5.6.9)
 5.5.1| 5.5.1
 
 Install
