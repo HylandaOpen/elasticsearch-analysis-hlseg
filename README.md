@@ -1,6 +1,10 @@
 hlseg Analysis for Elasticsearch
 =============================
 
+海量分词是天津海量信息技术股份有限公司自主研发分词核心，与2018将商业版分词免费提供给大家，欢迎使用。
+海量分词演示界面 http://bigdata.hylanda.com/smartCenter2018/index
+海量提供免费API接口，欢迎大家试用，如有疑问，请联系nlp@hylanda.com
+
 Analyzer: `hlseg_search` , `hlseg_large` , `hlseg_normal`, Tokenizer: `hlseg_search` , `hlseg_large` , `hlseg_normal`
 
 Versions
@@ -73,7 +77,7 @@ PUT /hlseg_large_index/data/_mapping
 ```bash
 GET /hlseg_large_index/_search
 {
-  "query" : { "match" : { "format_content" : "破产" }
+  "query" : { "match" : { "content" : "破产" }
   },
   "highlight": {
         "fields" : {
@@ -81,39 +85,43 @@ GET /hlseg_large_index/_search
         }
     }
 }
-'
 ```
 
 ### Dictionary Configuration
 
-`IKAnalyzer.cfg.xml` can be located at `{conf}/analysis-ik/config/IKAnalyzer.cfg.xml`
-or `{plugins}/elasticsearch-analysis-ik-*/config/IKAnalyzer.cfg.xml`
+`海量分词分为基础词词典CoreDict.dat和自定义词典userDict_utf8.txt。基础词词典在dictionary目录下，需要将CoreDict.rar解压后放在config目录下，可以通过修改config下的userDict_utf8.txt来更新自定义词典`
+自定义词典格式如下
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-	<comment>IK Analyzer 扩展配置</comment>
-	<!--用户可以在这里配置自己的扩展字典 -->
-	<entry key="ext_dict">custom/mydict.dic;custom/single_word_low_freq.dic</entry>
-	 <!--用户可以在这里配置自己的扩展停止词字典-->
-	<entry key="ext_stopwords">custom/ext_stopword.dic</entry>
- 	<!--用户可以在这里配置远程扩展字典 -->
-	<entry key="remote_ext_dict">location</entry>
- 	<!--用户可以在这里配置远程扩展停止词字典-->
-	<entry key="remote_ext_stopwords">http://xxx.com/xxx.dic</entry>
-</properties>
+```bash
+1.用户自定义词典采用文本格式，utf-8编码，每行一个词
+
+2.每个词包含三列属性，分别是词串、词的属性以及idf值的加权等级，并以Tab作为分隔，其中除了词串必填外，其他列可以不填，不填写则系统采用默认值
+
+3.“#”表示注释，会在加载时被忽略
+
+4.词的属性以西文逗号分隔，可以是词性、停止词标志或者自定义属性
+
+5.词性标记参考北大标准，用于词性标注时参考，该项不填则默认为名词
+
+6.停止词标志为：stopword，由SegOption.outputStopWord来控制是否输出停止词
+
+7.自定义属性不参与分词过程，分词结果中若Token.userTag不为空，则可以获取到该词的自定义属性。
+
+8.idf值的加权分5级，从低到高的定义是idf-lv1 — idf-lv5，等级越高则该词在关键词计算时的权重会越大，若不填写该值则系统默认是idf-lv3(中等权重）
 ```
 
-### 热更新 IK 分词使用方法
+### Segment Mode
+
+海量分词支持三种不同模式的分词。
+
+hlseg_search: 小颗粒度，适用于检索类的情境
+hlseg_normal：普通颗粒度，适用于多数情境
+hlseg_large：大颗粒度，适用于面向领域的分词情境（如果需要面向领域的分词优化，如专业词汇发现与整理，可以联系海量客服）
+
+
+### Segment Parma
 
 
 
 
-Thanks
-------
-YourKit supports IK Analysis for ElasticSearch project with its full-featured Java Profiler.
-YourKit, LLC is the creator of innovative and intelligent tools for profiling
-Java and .NET applications. Take a look at YourKit's leading software products:
-<a href="http://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a> and
-<a href="http://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>.
+
