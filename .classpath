@@ -27,6 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="F:/haojing/Works/Algorithm/elasticsearch-analysis-hlseg/lib/hlSegment-5.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/hlSegment-5.2.15.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -127,6 +127,7 @@ GET /hlseg_large_index/_search
 
 ### Segment Parma
 分词提供了以下几个参数，供用户选择配置
+
 1.`mergeChineseName`：是否合并中文名称，默认合并
 
 2.`mergeOrgInNormalGrainMode`：当选择`hlseg_normal`模式时，是否合并机构名，默认不合并
@@ -135,6 +136,25 @@ GET /hlseg_large_index/_search
 
 4.`outputStopWord`：是否输出停用词，默认不输出
 
+使用demo，例如设置输出停用词
+
+```bash
+
+PUT /test_index
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "default": {
+          "type": "hlseg_large",
+          "outputStopWord": true
+        }
+      }
+    }
+  }
+}
+
+```
 
 
 

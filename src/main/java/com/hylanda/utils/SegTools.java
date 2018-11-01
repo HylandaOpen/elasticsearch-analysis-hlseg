@@ -30,7 +30,7 @@ public class SegTools {
 			option.mergeChineseName = settings.getAsBoolean("mergeChineseName", true);
 			option.mergeOrgInNormalGrainMode = settings.getAsBoolean("mergeOrgInNormalGrainMode", false);
 			option.mergeNumeralAndQuantity = settings.getAsBoolean("mergeNumeralAndQuantity", true);
-			option.outputStopWord = settings.getAsBoolean("outputStopWord", true);
+			option.outputStopWord = settings.getAsBoolean("outputStopWord", false);
 		}
 		
 		return option;
