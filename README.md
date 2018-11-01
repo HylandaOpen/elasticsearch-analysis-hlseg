@@ -1,9 +1,11 @@
 hlseg Analysis for Elasticsearch
 =============================
 
-海量分词是天津海量信息技术股份有限公司自主研发分词核心，与2018将商业版分词免费提供给大家，欢迎使用。
-海量分词演示界面 http://bigdata.hylanda.com/smartCenter2018/index
-海量提供免费API接口，欢迎大家试用，如有疑问，请联系nlp@hylanda.com
+海量分词是天津海量信息技术股份有限公司自主研发的中文分词核心，已于2018年7月将分词5.0版免费开放给大家，欢迎试用。
+
+海量分词演示界面 `http://bigdata.hylanda.com/smartCenter2018/index`
+
+另外，海量提供免费API接口，文档详见`http://bigdata.hylanda.com/smartCenter2018/doc`，欢迎大家试用，如有疑问，请联系`nlp@hylanda.com`
 
 Analyzer: `hlseg_search` , `hlseg_large` , `hlseg_normal`, Tokenizer: `hlseg_search` , `hlseg_large` , `hlseg_normal`
 
@@ -90,7 +92,9 @@ GET /hlseg_large_index/_search
 ### Dictionary Configuration
 
 `海量分词分为基础词词典CoreDict.dat和自定义词典userDict_utf8.txt。基础词词典在dictionary目录下，需要将CoreDict.rar解压后放在config目录下，可以通过修改config下的userDict_utf8.txt来更新自定义词典`
+
 自定义词典格式如下
+
 
 ```bash
 1.用户自定义词典采用文本格式，utf-8编码，每行一个词
@@ -114,9 +118,11 @@ GET /hlseg_large_index/_search
 
 海量分词支持三种不同模式的分词。
 
-hlseg_search: 小颗粒度，适用于检索类的情境
-hlseg_normal：普通颗粒度，适用于多数情境
-hlseg_large：大颗粒度，适用于面向领域的分词情境（如果需要面向领域的分词优化，如专业词汇发现与整理，可以联系海量客服）
+1.`hlseg_search`: 小颗粒度，适用于检索类的情境
+
+2.`hlseg_normal`：普通颗粒度，适用于多数情境
+
+3.`hlseg_large`：大颗粒度，适用于面向领域的分词情境（如果需要面向领域的分词优化，如专业词汇发现与整理，可以联系海量客服）
 
 
 ### Segment Parma
