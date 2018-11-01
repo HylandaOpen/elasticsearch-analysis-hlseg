@@ -28,7 +28,7 @@ Install
 
 * optional 2 - use elasticsearch-plugin to install ( version > v5.5.1 ):
 
-    `./bin/elasticsearch-plugin install https://github.com/hylandahj/elasticsearch-analysis-hlseg/files/2533709/elasticsearch-analysis-hlseg-5.6.9.zip`
+    `./bin/elasticsearch-plugin install https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/download/v5.5.1/elasticsearch-analysis-hlseg-5.5.1.zip`
 
 2.restart elasticsearch
 
@@ -175,7 +175,7 @@ PUT /test_index
 
 <properties>
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<elasticsearch.version>5.5.1</elasticsearch.version>  <!--此处修改您目前的es的版本号，目前只支持5.0以上-->
+	<elasticsearch.version>5.5.1</elasticsearch.version>  <!--此处修改您目前的es的版本号，目前只支持5.5.1以上-->
 	<maven.compiler.target>1.8</maven.compiler.target>
 	<elasticsearch.assembly.descriptor>${project.basedir}/src/main/assemblies/plugin.xml</elasticsearch.assembly.descriptor>
 	<elasticsearch.plugin.name>analysis-hlseg</elasticsearch.plugin.name>
@@ -200,7 +200,7 @@ elasticsearch.version=5.5.1#修改修改您目前的es的版本号
 3.打包
 
 ```bash
-执行maven insatll后，即可在target/releases下找到对应的插件包
+执行maven install后，即可在target/releases下找到对应的插件包
 
 ```
 
