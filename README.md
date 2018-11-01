@@ -156,6 +156,58 @@ PUT /test_index
 
 ```
 
+### 自主打包插件
+
+如release中的版本不支持您使用的es版本，请下载源码自主打包。下载源码至本地，此源码问Maven工程，操作方法如下：
+
+1.修改pom.xml中的elasticsearch.version为您目前使用的elasticsearch版本
+
+```bash
+
+	<groupId>org.elasticsearch</groupId>
+	<artifactId>elasticsearch-analysis-hlseg</artifactId>
+	<version>5.5.1</version>   <!--此处修改成对应版本号-->
+	<packaging>jar</packaging>
+
+	<name>elasticsearch-analysis-hlseg</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<elasticsearch.version>5.5.1</elasticsearch.version>  <!--此处修改您目前的es的版本号，目前只支持5.0以上-->
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<elasticsearch.assembly.descriptor>${project.basedir}/src/main/assemblies/plugin.xml</elasticsearch.assembly.descriptor>
+		<elasticsearch.plugin.name>analysis-hlseg</elasticsearch.plugin.name>
+		<elasticsearch.plugin.classname>org.elasticsearch.plugin.analysis.AnalysiaHLSegPlugin</elasticsearch.plugin.classname>
+		<elasticsearch.plugin.jvm>true</elasticsearch.plugin.jvm>
+		<tests.rest.load_packaged>false</tests.rest.load_packaged>
+		<skip.unit.tests>true</skip.unit.tests>
+	</properties>
+
+```
+
+2.修改src/main/resources/plugin-descriptor.properties中的es版本号
+
+```bash
+#修改插件版本
+version=5.5.1
+#修改修改您目前的es的版本号
+elasticsearch.version=5.5.1
+
+```
+
+3.打包
+
+```bash
+执行maven insatll后，即可在target/releases下找到对应的插件包
+
+```
+
+
+### 使用协议
+
+hlseg es中文分词插件依赖海量分词核心包hlSegment-5.2.15.jar，请使用时遵循海量分词使用协议，文件见`dicitonary/天津海量信息技术股份有限责任公司分词（免费版）使用协议.docx`
 
 
 
