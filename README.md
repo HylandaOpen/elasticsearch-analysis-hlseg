@@ -14,6 +14,11 @@ Versions
 
 hlseg version | ES version | Release Link |
 -----------|-----------|-----------
+6.4.2| 6.4.2| Download: [v6.4.2](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.4.2)
+6.4.0| 6.4.0| Download: [v6.4.0](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.4.0)
+6.3.2| 6.3.2| Download: [v6.3.2](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.3.2)
+6.2.4| 6.2.4| Download: [v6.2.4](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.2.4)
+6.2.0| 6.2.0| Download: [v6.2.0](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.2.0)
 6.1.0| 6.1.0| Download: [v6.1.0](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.1.0)
 6.0.1| 6.0.1| Download: [v6.0.1](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.0.1)
 6.0.0| 6.0.0| Download: [v6.0.0](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.0.0)
@@ -34,8 +39,12 @@ Install
 * optional 2 - use elasticsearch-plugin to install ( version > v5.5.1 ):
 
     `./bin/elasticsearch-plugin install https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/download/v5.5.1/elasticsearch-analysis-hlseg-5.5.1.zip`
+    
+2.download hlseg dict
 
-2.restart elasticsearch
+download CoreDict.rar in the dictionary directory, Unzip the CoreDict.rar and copy it to the config directory
+
+3.restart elasticsearch
 
 
 
