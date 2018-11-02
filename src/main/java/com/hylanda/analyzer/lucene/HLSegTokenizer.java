@@ -5,7 +5,10 @@ import java.io.IOException;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
+import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.hylanda.analyzer.core.HLSegmenterAdapter;
 import com.hylanda.segmentor.common.SegGrain;
@@ -24,8 +27,7 @@ public class HLSegTokenizer  extends Tokenizer {
 	private final TypeAttribute typeAtt;
 	//记录最后一个词元的结束位置
 	private int endPosition;
-
-
+	
 	public HLSegTokenizer(SegOption option){
 	    super();
 	    offsetAtt = addAttribute(OffsetAttribute.class);
@@ -38,12 +40,15 @@ public class HLSegTokenizer  extends Tokenizer {
 
 	@Override
 	public boolean incrementToken() throws IOException {
+
 	    clearAttributes();
 	    if (segmenterAdapter.hasNext()) {
 	      Token token = segmenterAdapter.next();
+	       
 	      termAtt.append(token.wordStr);
 	      termAtt.setLength(token.len);
 	      offsetAtt.setOffset(token.offset, token.offset + token.len);
+	      	      	      
 	      endPosition = token.offset + token.len;
 	      typeAtt.setType(Segmentor.getNatureString(token.nature));
 	      return true;

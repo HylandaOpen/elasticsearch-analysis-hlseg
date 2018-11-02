@@ -35,24 +35,4 @@ public class SegTools {
 		
 		return option;
 	}
-
-	/*private static SegGrain getMode(String mode) {
-
-		SegGrain segMode;
-
-		switch (mode) {
-		case "large":
-			segMode = SegGrain.LARGE;
-			break;
-		case "normal":
-			segMode = SegGrain.NORMAL;
-			break;
-		default:
-			segMode = SegGrain.SMALL;
-			break;
-		}
-
-		return segMode;
-	}*/
-
 }

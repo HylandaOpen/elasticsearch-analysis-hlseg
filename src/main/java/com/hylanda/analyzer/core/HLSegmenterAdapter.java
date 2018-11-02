@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Iterator;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.hylanda.segmentor.BasicSegmentor;
 import com.hylanda.segmentor.common.SegOption;
 import com.hylanda.segmentor.common.SegResult;
@@ -48,13 +51,15 @@ public class HLSegmenterAdapter implements Iterator<Token> {
 			int size = 0;
 			while ((size = input.read(buf, 0, buf.length)) != -1) {
 				String tempstr = new String(buf, 0, size);
+					
 				bdr.append(tempstr);
 			}
-			text = bdr.toString().trim();
+			text = bdr.toString();
+	
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
 		SegResult result = segmentor.segment(text, option);
 		tokens = result.iterator();
 	}
