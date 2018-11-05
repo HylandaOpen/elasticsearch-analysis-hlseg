@@ -14,31 +14,31 @@ Versions
 
 hlseg version | ES version | Release Link |
 -----------|-----------|-----------
-6.4.2| 6.4.2| Download: [v6.4.2](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.4.2)
-6.4.0| 6.4.0| Download: [v6.4.0](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.4.0)
-6.3.2| 6.3.2| Download: [v6.3.2](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.3.2)
-6.2.4| 6.2.4| Download: [v6.2.4](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.2.4)
-6.2.0| 6.2.0| Download: [v6.2.0](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.2.0)
-6.1.0| 6.1.0| Download: [v6.1.0](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.1.0)
-6.0.1| 6.0.1| Download: [v6.0.1](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.0.1)
-6.0.0| 6.0.0| Download: [v6.0.0](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v6.0.0)
-5.6.12| 5.6.12| Download: [v5.6.12](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v5.6.12)
-5.6.9| 5.6.9| Download: [v5.6.9](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v5.6.9)
-5.5.3| 5.5.3| Download: [v5.5.3](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v5.5.3)
-5.5.1| 5.5.1| Download: [v5.5.1](https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/tag/v5.5.1)
+6.4.2| 6.4.2| Download: [v6.4.2](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.4.2)
+6.4.0| 6.4.0| Download: [v6.4.0](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.4.0)
+6.3.2| 6.3.2| Download: [v6.3.2](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.3.2)
+6.2.4| 6.2.4| Download: [v6.2.4](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.2.4)
+6.2.0| 6.2.0| Download: [v6.2.0](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.2.0)
+6.1.0| 6.1.0| Download: [v6.1.0](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.1.0)
+6.0.1| 6.0.1| Download: [v6.0.1](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.0.1)
+6.0.0| 6.0.0| Download: [v6.0.0](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.0.0)
+5.6.12| 5.6.12| Download: [v5.6.12](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v5.6.12)
+5.6.9| 5.6.9| Download: [v5.6.9](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v5.6.9)
+5.5.3| 5.5.3| Download: [v5.5.3](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v5.5.3)
+5.5.1| 5.5.1| Download: [v5.5.1](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v5.5.1)
 
 Install
 -------
 
 1.download or compile
 
-* optional 1 - download pre-build package from here: https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases
+* optional 1 - download pre-build package from here: https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases
     
     unzip plugin to folder `your-es-root/plugins/`
 
 * optional 2 - use elasticsearch-plugin to install ( version > v5.5.1 ):
 
-    `./bin/elasticsearch-plugin install https://github.com/hylandahj/elasticsearch-analysis-hlseg/releases/download/v5.5.1/elasticsearch-analysis-hlseg-5.5.1.zip`
+    `./bin/elasticsearch-plugin install https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/download/v5.5.1/elasticsearch-analysis-hlseg-5.5.1.zip`
     
 2.download hlseg dict
 
