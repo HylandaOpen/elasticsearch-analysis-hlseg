@@ -7,7 +7,7 @@ hlseg Analysis for Elasticsearch
 
 另外，海量提供免费API接口，文档详见`http://bigdata.hylanda.com/smartCenter2018/doc`，欢迎大家试用，如有疑问，请联系`nlp@hylanda.com`
 
-Analyzer: `hlseg_search` , `hlseg_large` , `hlseg_normal`, Tokenizer: `hlseg_search` , `hlseg_large` , `hlseg_normal`
+Analyzer: `hlseg_search`, Tokenizer: `hlseg_search`
 
 Versions
 --------
@@ -32,17 +32,13 @@ Install
 
 1.download or compile
 
-* optional 1 - download pre-build package from here: https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases
+download pre-build package from here: https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases
     
     unzip plugin to folder `your-es-root/plugins/`
 
-* optional 2 - use elasticsearch-plugin to install ( version > v5.5.1 ):
-
-    `./bin/elasticsearch-plugin install https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/download/v5.5.1/elasticsearch-analysis-hlseg-5.5.1.zip`
-    
 2.download hlseg dict
 
-download CoreDict.rar in the dictionary directory, Unzip the CoreDict.rar and copy it to the config directory
+download CoreDict.zip in the dictionary directory, Unzip the CoreDict.zip and copy it to the config directory
 
 3.restart elasticsearch
 
@@ -53,13 +49,13 @@ download CoreDict.rar in the dictionary directory, Unzip the CoreDict.rar and co
 1.create a index
 
 ```bash
-PUT hlseg_large_index
+PUT hlseg_search_index
 {
   "settings": {
     "analysis": {
       "analyzer": {
         "default": {
-          "type": "hlseg_large"
+          "type": "hlseg_search"
         }
       }
     }
@@ -70,7 +66,7 @@ PUT hlseg_large_index
 2.create a mapping
 
 ```bash
-PUT /hlseg_large_index/data/_mapping
+PUT /hlseg_search_index/data/_mapping
 {
   "data": {
     "properties": {
@@ -91,7 +87,7 @@ PUT /hlseg_large_index/data/_mapping
 3.query with highlighting
 
 ```bash
-GET /hlseg_large_index/_search
+GET /hlseg_search_index/_search
 {
   "query" : { "match" : { "content" : "破产" }
   },
@@ -105,7 +101,7 @@ GET /hlseg_large_index/_search
 
 ### Dictionary Configuration
 
-`海量分词分为基础词词典CoreDict.dat和自定义词典userDict_utf8.txt。基础词词典在dictionary目录下，需要将CoreDict.rar解压后放在config目录下，可以通过修改config下的userDict_utf8.txt来更新自定义词典`
+`海量分词分为基础词词典CoreDict.dat和自定义词典userDict_utf8.txt。基础词词典在dictionary目录下，需要将CoreDict.zip解压后放在config目录下，可以通过修改config下的userDict_utf8.txt来更新自定义词典`
 
 自定义词典格式如下
 
@@ -130,25 +126,20 @@ GET /hlseg_large_index/_search
 
 ### Segment Mode
 
-海量分词支持三种不同模式的分词。
+海量分词支持以下模式分词。
 
-1.`hlseg_search`: 小颗粒度，适用于检索类的情境
+`hlseg_search`: 适用于检索类的情境
 
-2.`hlseg_normal`：普通颗粒度，适用于多数情境
-
-3.`hlseg_large`：大颗粒度，适用于面向领域的分词情境（如果需要面向领域的分词优化，如专业词汇发现与整理，可以联系海量客服）
 
 
 ### Segment Parma
 分词提供了以下几个参数，供用户选择配置
 
-1.`mergeChineseName`：`true/false`。是否合并中文名称，默认合并`true`
+1.`mergeOrgInNormalGrainMode`：`true/false`。当选择`hlseg_normal`模式时，是否合并机构名，默认不合并`false`
 
-2.`mergeOrgInNormalGrainMode`：`true/false`。当选择`hlseg_normal`模式时，是否合并机构名，默认不合并`false`
+2.`mergeNumeralAndQuantity`：`true/false`。是否合并数量词，默认合并`true`
 
-3.`mergeNumeralAndQuantity`：`true/false`。是否合并数量词，默认合并`true`
-
-4.`outputStopWord`：`true/false`。是否输出停用词，默认不输出`false`
+3.`outputStopWord`：`true/false`。是否输出停用词，默认不输出`false`
 
 使用demo，例如设置输出停用词
 
