@@ -151,7 +151,7 @@ PUT /test_index
     "analysis": {
       "analyzer": {
         "default": {
-          "type": "hlseg_large",
+          "type": "hlseg_search",
           "outputStopWord": true
         }
       }
@@ -212,7 +212,7 @@ elasticsearch.version=5.5.1#修改修改您目前的es的版本号
 
 ### 使用协议
 
-hlseg es中文分词插件依赖海量分词核心包hlSegment-5.2.15.jar，请使用时遵循海量分词使用协议，文件见`dicitonary/天津海量信息技术股份有限责任公司分词（免费版）使用协议.docx`
+hlseg es中文分词插件依赖海量分词核心包segment-5.2.16-SNAPSHOT.jar，请使用时遵循海量分词使用协议，文件见`dicitonary/天津海量信息技术股份有限责任公司分词（免费版）使用协议.docx`
 
 
 
