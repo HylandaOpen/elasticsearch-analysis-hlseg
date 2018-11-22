@@ -215,4 +215,9 @@ elasticsearch.version=5.5.1#修改修改您目前的es的版本号
 hlseg es中文分词插件依赖海量分词核心包segment-5.2.16-SNAPSHOT.jar，请使用时遵循海量分词使用协议，文件见`dicitonary/天津海量信息技术股份有限责任公司分词（免费版）使用协议.docx`
 
 
+### 自主打包插件
 
+版本更新记录
+
+
+2018/11/22 更新，1.删除之前的三个分词模式，只保留hlseg_search模式。2解决hlseg_search模式下，合并中文人名
