@@ -15,19 +15,13 @@ public class SegTools {
 		BasicSegmentor.loadStaticDictionary(coredict, usrdict);
 	}
 	
-	public static SegOption getOption(SegGrain mode, Settings settings){
-		
-		if(mode == null){
-			mode = SegGrain.SMALL;
-		}
-		
+	public static SegOption getOption(Settings settings){
 		SegOption option = new SegOption();
 		option.doPosTagging = true;  //做词性标注
-		option.grainSize = mode;
+		option.grainSize = SegGrain.SMALL;
 		option.outputDelimiter = false;
 		
 		if(settings != null){
-			option.mergeChineseName = settings.getAsBoolean("mergeChineseName", true);
 			option.mergeOrgInNormalGrainMode = settings.getAsBoolean("mergeOrgInNormalGrainMode", false);
 			option.mergeNumeralAndQuantity = settings.getAsBoolean("mergeNumeralAndQuantity", true);
 			option.outputStopWord = settings.getAsBoolean("outputStopWord", false);

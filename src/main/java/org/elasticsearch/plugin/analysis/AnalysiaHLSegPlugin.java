@@ -20,11 +20,8 @@ public class AnalysiaHLSegPlugin extends Plugin implements AnalysisPlugin {
     public Map<String, AnalysisModule.AnalysisProvider<TokenizerFactory>> getTokenizers() {
         Map<String, AnalysisModule.AnalysisProvider<TokenizerFactory>> extra = new HashMap<>();
 
-
         extra.put("hlseg_search", HLSegTokenizerFactory::getHLSegSearchTokenizerFactory);
-        extra.put("hlseg_large", HLSegTokenizerFactory::getHLSegLargeTokenizerFactory);
-        extra.put("hlseg_normal", HLSegTokenizerFactory::getHLSegNormalTokenizerFactory);
-
+       
         return extra;
     }
 
@@ -33,9 +30,7 @@ public class AnalysiaHLSegPlugin extends Plugin implements AnalysisPlugin {
         Map<String, AnalysisModule.AnalysisProvider<AnalyzerProvider<? extends Analyzer>>> extra = new HashMap<>();
 
         extra.put("hlseg_search", HLSegAnalyzerProvider::getHLSegSearchAnalyzerProvider);
-        extra.put("hlseg_large", HLSegAnalyzerProvider::getHLSegLargeAnalyzerProvider);
-        extra.put("hlseg_normal", HLSegAnalyzerProvider::getHLSegNormalAnalyzerProvider);
-
+        
         return extra;
     }
 

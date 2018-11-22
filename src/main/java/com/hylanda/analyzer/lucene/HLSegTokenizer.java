@@ -5,16 +5,12 @@ import java.io.IOException;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
-import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.TypeAttribute;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.hylanda.analyzer.core.HLSegmenterAdapter;
-import com.hylanda.segmentor.common.SegGrain;
+import com.hylanda.segmentor.Segmentor;
 import com.hylanda.segmentor.common.SegOption;
 import com.hylanda.segmentor.common.Token;
-import com.hylanda.segmentor.Segmentor;
 
 public class HLSegTokenizer  extends Tokenizer {
 	

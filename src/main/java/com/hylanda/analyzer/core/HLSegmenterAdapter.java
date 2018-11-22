@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Iterator;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hylanda.segmentor.BasicSegmentor;
 import com.hylanda.segmentor.common.SegOption;
 import com.hylanda.segmentor.common.SegResult;
@@ -22,7 +19,7 @@ public class HLSegmenterAdapter implements Iterator<Token> {
 	private Iterator<Token> tokens;
 	
 	private String text = null;
-
+	
 
 	public HLSegmenterAdapter(SegOption option) {
 		this.option = option;
