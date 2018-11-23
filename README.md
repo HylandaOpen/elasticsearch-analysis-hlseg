@@ -221,3 +221,9 @@ hlseg es中文分词插件依赖海量分词核心包segment-5.2.16-SNAPSHOT.jar
 
 
 2018/11/22 更新，1.删除之前的三个分词模式，只保留hlseg_search模式。2解决hlseg_search模式下，合并中文人名
+
+
+### 常见问题
+
+1.如果安装了分词插件后，启动es报如下错误，请将elasticsearch-hlseg/plugin-descriptor.properties中的jvm, site, isolated三个配置注释掉
+java.lang.IllegalArgumentException: Unknown properties in plugin descriptor: [jvm, site, isolated]
