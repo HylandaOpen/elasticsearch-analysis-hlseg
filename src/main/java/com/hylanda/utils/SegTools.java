@@ -22,8 +22,6 @@ public class SegTools {
 		option.outputDelimiter = false;
 		
 		if(settings != null){
-			option.mergeOrgInNormalGrainMode = settings.getAsBoolean("mergeOrgInNormalGrainMode", false);
-			option.mergeNumeralAndQuantity = settings.getAsBoolean("mergeNumeralAndQuantity", true);
 			option.outputStopWord = settings.getAsBoolean("outputStopWord", false);
 		}
 		
