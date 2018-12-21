@@ -3,7 +3,7 @@ hlseg Analysis for Elasticsearch
 
 海量分词是天津海量信息技术股份有限公司自主研发的中文分词核心，已于2018年7月将分词5.0版免费开放给大家，欢迎试用。
 
-海量分词演示界面 `http://bigdata.hylanda.com/smartCenter2018/index`
+海量分词演示界面 `http://www.hylanda.com/smartCenter2018/index`
 
 海量分词核心和词典包不定期进行更新，请在http://www.hylanda.com/smartCenter2018/download进行下载，并将对应的jar和词典包分别拷贝至elasticsearch-hlseg和elasticsearch-hlseg/config目录下
 
