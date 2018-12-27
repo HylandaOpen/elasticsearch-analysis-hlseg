@@ -7,7 +7,7 @@ hlseg Analysis for Elasticsearch
 
 海量分词核心和词典包不定期进行更新，请在http://www.hylanda.com/smartCenter2018/download 进行下载，并将对应的jar和词典包分别拷贝至elasticsearch-hlseg和elasticsearch-hlseg/config目录下
 
-另外，海量提供免费API接口，文档详见http://bigdata.hylanda.com/smartCenter2018/doc ，欢迎大家试用，如有疑问，请联系`nlp@hylanda.com`
+另外，海量提供免费API接口，文档详见http://www.hylanda.com/smartCenter2018/doc ，欢迎大家试用，如有疑问，请联系`nlp@hylanda.com`
 
 Analyzer: `hlseg_search`, Tokenizer: `hlseg_search`
 
