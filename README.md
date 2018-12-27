@@ -7,7 +7,7 @@ hlseg Analysis for Elasticsearch
 
 海量分词核心和词典包不定期进行更新，请在http://www.hylanda.com/smartCenter2018/download 进行下载，并将对应的jar和词典包分别拷贝至elasticsearch-hlseg和elasticsearch-hlseg/config目录下
 
-另外，海量提供免费API接口，文档详见`http://bigdata.hylanda.com/smartCenter2018/doc`，欢迎大家试用，如有疑问，请联系`nlp@hylanda.com`
+另外，海量提供免费API接口，文档详见http://bigdata.hylanda.com/smartCenter2018/doc ，欢迎大家试用，如有疑问，请联系`nlp@hylanda.com`
 
 Analyzer: `hlseg_search`, Tokenizer: `hlseg_search`
 
@@ -40,7 +40,7 @@ download pre-build package from here: https://github.com/HylandaOpen/elasticsear
 
 2.download hlseg dict
 
-download CoreDict.zip in the dictionary directory, Unzip the CoreDict.zip and copy it to the config directory
+download CoreDict.zip in the dictionary directory https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/blob/master/dictionary, Unzip the CoreDict.zip and copy it to the config directory
 
 3.restart elasticsearch
 
@@ -135,7 +135,7 @@ GET /hlseg_search_index/_search
 
 
 ### Segment Parma
-分词提供了以下几个参数，供用户选择配置
+分词提供了以下参数，供用户选择配置
 
 1.`outputStopWord`：`true/false`。是否输出停用词，默认不输出`false`
 
