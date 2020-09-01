@@ -16,6 +16,7 @@ Versions
 
 hlseg version | ES version | Release Link |
 -----------|-----------|-----------
+7.6.0| 7.6.0| Download: [v7.6.0](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v7.6.0)
 6.4.2| 6.4.2| Download: [v6.4.2](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.4.2)
 6.4.0| 6.4.0| Download: [v6.4.0](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.4.0)
 6.3.2| 6.3.2| Download: [v6.3.2](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.3.2)
