@@ -3,11 +3,11 @@ hlseg Analysis for Elasticsearch
 
 海量分词是天津海量信息技术股份有限公司自主研发的中文分词核心，已于2018年7月将分词5.0版免费开放给大家，欢迎试用。
 
-海量分词演示界面 `http://bigdata.hylanda.com/smartCenter2018/index`
+海量分词演示界面 http://www.hailiangxinxi.com/smartCenter2018/index
 
-海量分词核心和词典包不定期进行更新，请在http://www.hylanda.com/smartCenter2018/download进行下载，并将对应的jar和词典包分别拷贝至elasticsearch-hlseg和elasticsearch-hlseg/config目录下
+海量分词核心和词典包不定期进行更新，请在http://www.hailiangxinxi.com/smartCenter2018/download 进行下载，并将对应的jar和词典包分别拷贝至elasticsearch-hlseg和elasticsearch-hlseg/config目录下
 
-另外，海量提供免费API接口，文档详见`http://bigdata.hylanda.com/smartCenter2018/doc`，欢迎大家试用，如有疑问，请联系`nlp@hylanda.com`
+另外，海量提供免费API接口，文档详见http://www.hailiangxinxi.com/smartCenter2018/doc ，欢迎大家试用，如有疑问，请联系`nlp@hylanda.com`
 
 Analyzer: `hlseg_search`, Tokenizer: `hlseg_search`
 
@@ -16,6 +16,8 @@ Versions
 
 hlseg version | ES version | Release Link |
 -----------|-----------|-----------
+7.6.0| 7.6.0| Download: [v7.6.0](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v7.6.0)
+6.7.1| 6.7.1| Download: [v6.7.1](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.7.1)
 6.4.2| 6.4.2| Download: [v6.4.2](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.4.2)
 6.4.0| 6.4.0| Download: [v6.4.0](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.4.0)
 6.3.2| 6.3.2| Download: [v6.3.2](https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/releases/tag/v6.3.2)
@@ -40,7 +42,7 @@ download pre-build package from here: https://github.com/HylandaOpen/elasticsear
 
 2.download hlseg dict
 
-download CoreDict.zip in the dictionary directory, Unzip the CoreDict.zip and copy it to the config directory
+download CoreDict.zip in the dictionary directory https://github.com/HylandaOpen/elasticsearch-analysis-hlseg/blob/master/dictionary, Unzip the CoreDict.zip and copy it to the config directory
 
 3.restart elasticsearch
 
@@ -135,7 +137,7 @@ GET /hlseg_search_index/_search
 
 
 ### Segment Parma
-分词提供了以下几个参数，供用户选择配置
+分词提供了以下参数，供用户选择配置
 
 1.`outputStopWord`：`true/false`。是否输出停用词，默认不输出`false`
 
