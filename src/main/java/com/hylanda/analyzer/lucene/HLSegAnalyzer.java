@@ -8,9 +8,9 @@ import com.hylanda.utils.SegTools;
 public class HLSegAnalyzer extends Analyzer {
 
 	private SegOption option = null;
-	
+
 	public HLSegAnalyzer() {
-		option = SegTools.getOption(null);
+		option = SegTools.getOption(null, null);
 	}
 
 	public HLSegAnalyzer(SegOption option) {
