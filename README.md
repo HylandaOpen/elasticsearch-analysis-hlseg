@@ -132,7 +132,9 @@ GET /hlseg_search_index/_search
 
 海量分词支持以下模式分词。
 
-`hlseg_search`: 适用于检索类的情境
+`hlseg_search`: 分词颗粒度小，适用于检索类的情境
+`hlseg_large`: 分词颗粒度大，公司名，机构名等进行和词合并
+`hlseg_normal`: 分词正常颗粒度。
 
 
 
@@ -220,7 +222,8 @@ hlseg es中文分词插件依赖海量分词核心包segment-5.2.16-SNAPSHOT.jar
 版本更新记录
 
 
-2018/11/22 更新，1.删除之前的三个分词模式，只保留hlseg_search模式。2解决hlseg_search模式下，合并中文人名
+2018/11/22 更新，1.删除之前的三个分词模式，只保留hlseg_search模式。2解决hlseg_search模式下，合并中文人名。
+2020/09/01 更新，恢复三种分词模式。6.7.1版本以下只支持分词检索模式。6.7.1以上包括三种分词模式
 
 
 ### 常见问题
